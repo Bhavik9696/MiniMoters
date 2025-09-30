@@ -9,7 +9,15 @@ function App() {
   const [query, setQuery] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const [products, setProducts] = useState([]);
+  // ✅ Initial products
+  const [products, setProducts] = useState([
+    { name: 'Diecast Bitz', category: 'Car', price: 1200 },
+    { name: 'Keychain (Car + Anime)', category: 'Keychain', price: 250 },
+    { name: 'Car Poster', category: 'Poster', price: 150 },
+    { name: 'F1 Car', category: 'Formula', price: 5000 },
+    { name: 'Anime (3D)', category: 'Anime', price: 800 },
+    { name: 'Avengers (3D)', category: 'Avengers', price: 950 },
+  ]);
 
   const handleBuy = (product) => setSelectedProduct(product);
   const handleCloseModal = () => setSelectedProduct(null);
